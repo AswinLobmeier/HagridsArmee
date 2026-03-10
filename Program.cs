@@ -1,9 +1,13 @@
 ﻿using System;
+using System.ComponentModel.Design;
 
 public class Program
 {
     public static void Main()
-    {    
+    {
+        /*
+          
+       
         // 1.1
         Personen personen = new Personen("", "", 0);
         personen.Eingabe();
@@ -190,6 +194,62 @@ public class Program
          Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");  
          Console.ReadKey();
          Console.Clear();
+        
+         
+         */
+
+        Console.WriteLine("Aufgabe 3.1: Gib Zahlen von 1-20 aus..\n");
+        for (int i = 1; i <= 20; i++)
+        {
+            Console.Write($"{i} ");
+        }
+        Console.WriteLine("");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Console.WriteLine("Aufgabe 3.2: Gib nur gerade Zahlen von 1-50 aus..\n");
+        for (int i = 1; i <= 50; i++)
+            if (i % 2 == 0)
+            {
+                Console.Write($"{i} ");
+            }
+        Console.WriteLine("");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Console.WriteLine("Aufgabe 3.3: Berechne Summe von 1 -100..\n");
+        int sum = 0;
+        for (int i = 1; i <= 100; i++)
+        {
+            sum += i;
+            Console.WriteLine($"{sum}");
+        }
+        Console.WriteLine("");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Console.WriteLine("Aufgabe 3.4: Frage nach Zahl und gib Zahlen bis zu der Zahl aus\n");
+        Console.Write("Gib mir bitte eine Zahl zwischen 1 und 50: ");
+        int a = int.Parse(Console.ReadLine());
+            if (a >= 1 && a <= 50)
+            {
+                for (int i = 1; i <= a; i++)
+                {
+                    Console.WriteLine($"{i}");
+                }
+            }
+                Console.WriteLine("Bitte eine Zahl zwischen 1 und 50..");
+        Console.WriteLine("");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
     }
 }
 
