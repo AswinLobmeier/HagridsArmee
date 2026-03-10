@@ -26,6 +26,6 @@ public class Personen
 
     public void Anzeigen()
     {
-        Console.WriteLine($"Vorname: {Vorname}, Nachname: {Nachname}, Alter: {Alter} Jahre");
+        Console.WriteLine($"\nVorname: {Vorname}\nNachname: {Nachname}\nAlter: {Alter} Jahre");
     }
 }

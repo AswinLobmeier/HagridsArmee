@@ -12,3 +12,4 @@ C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\refint\HagridsArme
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.pdb
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.genruntimeconfig.cache
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\ref\HagridsArmee.dll
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.sourcelink.json
