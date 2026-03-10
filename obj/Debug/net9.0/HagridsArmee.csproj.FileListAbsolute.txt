@@ -1,0 +1,14 @@
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\bin\Debug\net9.0\HagridsArmee.exe
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\bin\Debug\net9.0\HagridsArmee.deps.json
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\bin\Debug\net9.0\HagridsArmee.runtimeconfig.json
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\bin\Debug\net9.0\HagridsArmee.dll
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\bin\Debug\net9.0\HagridsArmee.pdb
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.AssemblyInfoInputs.cache
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.AssemblyInfo.cs
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.csproj.CoreCompileInputs.cache
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.dll
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\refint\HagridsArmee.dll
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.pdb
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.genruntimeconfig.cache
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\ref\HagridsArmee.dll
