@@ -195,8 +195,6 @@ public class Program
          Console.ReadKey();
          Console.Clear();
         
-         
-         */
 
         Console.WriteLine("Aufgabe 3.1: Gib Zahlen von 1-20 aus..\n");
         for (int i = 1; i <= 20; i++)
@@ -245,6 +243,32 @@ public class Program
                 }
             }
                 Console.WriteLine("Bitte eine Zahl zwischen 1 und 50..");
+        Console.WriteLine("");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+        */
+
+        Console.WriteLine("Aufgabe 3.5: Erstelle eine Multiplikationstabelle\n");
+        int a = 20;
+        Console.WriteLine("________________");
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine($"|{a} x {i} = {a * i}\t|");
+        }
+
+        Console.WriteLine("________________");
+        Console.WriteLine("");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Console.WriteLine("Aufgabe 4.6: zähle rückwärts..\n");
+        for (int i = 20; i > 0; i--)
+        {
+            Console.Write($"{i} ");
+        }
         Console.WriteLine("");
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
