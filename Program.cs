@@ -390,7 +390,7 @@ public class Program
          Console.ReadKey();
          Console.Clear();
 
-        */
+
         //########################################################################################## Aufgabe 6 ########################################################################################## 
 
         Auto auto1 = new Auto("Ford", 2013);
@@ -403,6 +403,48 @@ public class Program
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
+
+        */
+
+        //########################################################################################## Aufgabe 7 ########################################################################################## 
+
+        List<Studenten> listeStudenten = new List<Studenten>();
+
+        Console.WriteLine($"\nHallo, aktuell befinden sich {listeStudenten.Count} Studenten in der Liste");
+        Console.WriteLine("\nWieviele neue Studenten sollen hinzugefügt werden?: ");
+        int anzahlStudenten = int.Parse(Console.ReadLine());
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        for (int i = 0; i < anzahlStudenten; i++)
+        {
+            Console.WriteLine($"\nEingabe Student {i + 1} von gewünschtrn {anzahlStudenten} Studenten...");
+            Studenten student = new Studenten("", 0);
+            student.HinzufügenStudent();
+            listeStudenten.Add(student);
+            Console.Clear();
+        }
+
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        foreach (Studenten s in listeStudenten)
+        {
+            s.AnzeigenStudent();
+        }
+
+        Console.WriteLine($"\nHallo, jetzt befinden sich {listeStudenten.Count} Studenten in der Liste");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+
+
+
+
 
     }
 }
