@@ -404,13 +404,14 @@ public class Program
         Console.ReadKey();
         Console.Clear();
 
+
         */
 
         //########################################################################################## Aufgabe 7 ########################################################################################## 
 
         List<Studenten> listeStudenten = new List<Studenten>();
 
-        Console.WriteLine($"\nHallo, aktuell befinden sich {listeStudenten.Count} Studenten in der Liste");
+        Console.WriteLine($"\nHallo, aktuell befinden sich {listeStudenten.Count()} Studenten in der Liste");
         Console.WriteLine("\nWieviele neue Studenten sollen hinzugefügt werden?: ");
         int anzahlStudenten = int.Parse(Console.ReadLine());
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
@@ -435,16 +436,63 @@ public class Program
             s.AnzeigenStudent();
         }
 
-        Console.WriteLine($"\nHallo, jetzt befinden sich {listeStudenten.Count} Studenten in der Liste");
+        Console.WriteLine($"\nHallo, jetzt befinden sich {listeStudenten.Count()} Studenten in der Liste");
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
 
 
+        //########################################################################################## Aufgabe 8 ##########################################################################################
 
+        Console.WriteLine("\nAusgabe aller Studenten über 20 Jahre [8.1]");
+        var studentUeber20 = listeStudenten.Where(s => s.Alter > 20);
+        foreach (var student in studentUeber20)
+        {
+            student.AnzeigenStudent();
+        }
 
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
 
+        Console.WriteLine("\nAusgabe aller Studenten unter 18 Jahre [8.2]");
+        var studentU18 = listeStudenten.Where(s => s.Alter < 18);
+        foreach (var student in studentU18)
+        {
+            student.AnzeigenStudent();
+        }
 
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("\nZählen aller Studenten über 25 Jahre [8.3]");
+        var studentUeber25 = listeStudenten.Where(s => s.Alter > 25);
+        Console.WriteLine($"\nHallo, es befinden sich {studentUeber25.Count()} Studenten über 25 Jahre in der Liste");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("\nSortieren aller Studenten nach Alter [8.4]");
+        var sortiereStudenten = listeStudenten.OrderBy(s => s.Alter);
+        foreach (var student in sortiereStudenten)
+        {
+            student.AnzeigenStudent();
+        }
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("\nDen ältesten Studenten anzeigen [8.6]");
+        var aeltester = listeStudenten.Max(s => s.Alter);       // ers max und dann auf den verweisen
+        var aeltesterStudent = listeStudenten.Where(s => s.Alter == aeltester);
+        foreach (var student in aeltesterStudent)
+        {
+            student.AnzeigenStudent();
+        }
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
 
     }
 }
