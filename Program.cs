@@ -7,7 +7,7 @@ public class Program
     {
 
         /*  
-       
+        //########################################################################################## Aufgabe 1 ########################################################################################## 
         // 1.1
         Personen personen = new Personen("", "", 0);
         personen.Eingabe();
@@ -67,6 +67,9 @@ public class Program
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
+
+        //########################################################################################## Aufgabe 2 ########################################################################################## 
+
 
         // 2.1
         do
@@ -194,7 +197,8 @@ public class Program
          Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");  
          Console.ReadKey();
          Console.Clear();
-        
+         
+        //########################################################################################## Aufgabe 3 ##########################################################################################        
 
         Console.WriteLine("Aufgabe 3.1: Gib Zahlen von 1-20 aus..\n");
         for (int i = 1; i <= 20; i++)
@@ -274,6 +278,7 @@ public class Program
         Console.ReadKey();
         Console.Clear();
 
+        //########################################################################################## Aufgabe ´4 ########################################################################################## 
 
         Methode4_1.SagHallo(personen.Vorname, personen.Nachname, personen.Alter);
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
@@ -319,8 +324,7 @@ public class Program
         Console.ReadKey();
         Console.Clear();
 
-        */
-       
+        //########################################################################################## Aufgabe 5 ########################################################################################## 
 
         Console.Write($"\nHallo, sag mir eine Automarke: ");
         string auto1 = Console.ReadLine();
@@ -386,7 +390,19 @@ public class Program
          Console.ReadKey();
          Console.Clear();
 
+        */
+        //########################################################################################## Aufgabe 6 ########################################################################################## 
 
+        Auto auto1 = new Auto("Ford", 2013);
+        Auto auto2 = new Auto("BMW", 2024);
+        Auto auto3 = new Auto("Mercedes", 2025);
+
+        Console.WriteLine($"\n Automarke 1: {auto1.Marke}\t Baujahr: {auto1.Baujahr}");
+        Console.WriteLine($" Automarke 2: {auto2.Marke}\t Baujahr: {auto2.Baujahr}");
+        Console.WriteLine($" Automarke 3: {auto3.Marke}\t Baujahr: {auto3.Baujahr}");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
 
     }
 }
