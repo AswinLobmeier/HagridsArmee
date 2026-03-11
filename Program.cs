@@ -5,8 +5,8 @@ public class Program
 {
     public static void Main()
     {
-        
-          
+
+        /*  
        
         // 1.1
         Personen personen = new Personen("", "", 0);
@@ -14,12 +14,11 @@ public class Program
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
-        //personen.Anzeigen();
-        //Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
-        //Console.ReadKey();
-        //Console.Clear();
+        personen.Anzeigen();
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
 
-        /*
 
         //1.2
         Console.Write("\nHallo, mein Name ist Aswin, Wie heißt Du: ");
@@ -275,10 +274,6 @@ public class Program
         Console.ReadKey();
         Console.Clear();
 
-        */
-
-
-
 
         Methode4_1.SagHallo(personen.Vorname, personen.Nachname, personen.Alter);
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
@@ -323,6 +318,75 @@ public class Program
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
+
+        */
+       
+
+        Console.Write($"\nHallo, sag mir eine Automarke: ");
+        string auto1 = Console.ReadLine();
+        Console.WriteLine($"\nWelches Baujahr ist dein {auto1}?: ");
+        int baujahr1 = int.Parse(Console.ReadLine());
+        Console.WriteLine($"\nWie schnell wird dein {auto1} fahren?: ");
+        int geschwindigkeit1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.Write($"\nHallo, sag mir eine weitere Automarke: ");
+        string auto2 = Console.ReadLine();
+        Console.WriteLine($"\nWelches Baujahr ist dein {auto2}?: ");
+        int baujahr2 = int.Parse(Console.ReadLine());
+        Console.WriteLine($"\nWie schnell wird dein {auto2} fahren?: ");
+        int geschwindigkeit2 = int.Parse(Console.ReadLine());
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Auto auto_1 = new Auto(auto1, baujahr1);      //5.2
+        auto_1.Anzeigen();                                    //5.2
+        auto_1.Fahren(geschwindigkeit1);                                //5.5
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        Auto auto_2 = new Auto(auto2, baujahr2);      //5.3
+        auto_2.Anzeigen();                                    //5.3
+        auto_2.Fahren(geschwindigkeit2);                                   //5.5
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+
+        Console.WriteLine("Liste mit 5 Autos erstellen..\n");
+        Auto[] autos = new Auto[5];
+        //autos.Clear();
+        for (int i = 0; i < autos.Length; i++)
+
+        {
+            int j = i + 1;
+            Console.Write($"\nHallo, sag mir eine {j}te von {autos.Length} Automarken: ");
+            string autoNew = Console.ReadLine();
+            Console.WriteLine($"\nWelches Baujahr ist dein {autoNew}?: ");
+            int baujahrNew = int.Parse(Console.ReadLine());
+            Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+            Console.ReadKey();
+            Console.Clear();
+
+            autos[i] = new Auto(autoNew, baujahrNew);
+        }
+         
+        Console.WriteLine("\nIn der Liste sind alle deine Autos..\n");
+         foreach (Auto auto in autos)
+         {
+             auto.Anzeigen();
+         }
+         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+         Console.ReadKey();
+         Console.Clear();
+
+
 
     }
 }
