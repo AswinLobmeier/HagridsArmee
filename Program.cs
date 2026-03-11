@@ -5,7 +5,7 @@ public class Program
 {
     public static void Main()
     {
-        /*
+        
           
        
         // 1.1
@@ -14,11 +14,12 @@ public class Program
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
-        personen.Anzeigen();
+        //personen.Anzeigen();
+        //Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        //Console.ReadKey();
+        //Console.Clear();
 
-        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
-        Console.ReadKey();
-        Console.Clear();
+        /*
 
         //1.2
         Console.Write("\nHallo, mein Name ist Aswin, Wie heißt Du: ");
@@ -247,7 +248,7 @@ public class Program
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
-        */
+        
 
         Console.WriteLine("Aufgabe 3.5: Erstelle eine Multiplikationstabelle\n");
         int a = 20;
@@ -264,12 +265,61 @@ public class Program
         Console.Clear();
 
 
-        Console.WriteLine("Aufgabe 4.6: zähle rückwärts..\n");
+        Console.WriteLine("Aufgabe 3.6: zähle rückwärts..\n");
         for (int i = 20; i > 0; i--)
         {
             Console.Write($"{i} ");
         }
         Console.WriteLine("");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        */
+
+
+
+
+        Methode4_1.SagHallo(personen.Vorname, personen.Nachname, personen.Alter);
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        int a = 1;
+        int b = 2;
+
+        Console.Write($"\nHallo, sag mir eine beliebige Zahl: ");
+        a = int.Parse(Console.ReadLine());
+        Console.Write($"\n...sag mir noch eine zweite beliebige Zahl: ");
+        b = int.Parse(Console.ReadLine());
+
+
+        Methode4_2.Addieren(a, b);
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Methode4_3.IstGerade(a, b);
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Methode4_4.Quadrat(a, b);
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Methode4_5.MaxZahl(a, b);
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Methode4_6.NoteBerechnen();
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();

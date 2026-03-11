@@ -16,7 +16,7 @@ public class Personen
 
     public void Eingabe() 
     {
-        Console.Write("Geben Sie den Vornamen ein: ");
+        Console.Write("\nGeben Sie den Vornamen ein: ");
         Vorname = Console.ReadLine();
         Console.Write("Geben Sie den Nachnamen ein: ");
         Nachname = Console.ReadLine();
