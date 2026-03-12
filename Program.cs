@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using System.Linq.Expressions;
+using System.Numerics;
 
 public class Program
 {
@@ -197,7 +199,7 @@ public class Program
          Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");  
          Console.ReadKey();
          Console.Clear();
-         
+
         //########################################################################################## Aufgabe 3 ##########################################################################################        
 
         Console.WriteLine("Aufgabe 3.1: Gib Zahlen von 1-20 aus..\n");
@@ -251,7 +253,7 @@ public class Program
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
-        
+
 
         Console.WriteLine("Aufgabe 3.5: Erstelle eine Multiplikationstabelle\n");
         int a = 20;
@@ -380,7 +382,7 @@ public class Program
 
             autos[i] = new Auto(autoNew, baujahrNew);
         }
-         
+
         Console.WriteLine("\nIn der Liste sind alle deine Autos..\n");
          foreach (Auto auto in autos)
          {
@@ -408,7 +410,7 @@ public class Program
         */
 
         //########################################################################################## Aufgabe 7 ########################################################################################## 
-
+        /*
         List<Studenten> listeStudenten = new List<Studenten>();
 
         Console.WriteLine($"\nHallo, aktuell befinden sich {listeStudenten.Count()} Studenten in der Liste");
@@ -440,7 +442,7 @@ public class Program
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
-
+        */
 
         //########################################################################################## Aufgabe 8 ##########################################################################################
         /*
@@ -510,7 +512,7 @@ public class Program
         //########################################################################################## Aufgabe 9 ##########################################################################################
 
         // https://learntutorials.net/de/csharp/topic/68/linq-abfragen
-
+        /*
         Console.WriteLine("\nDas Durchschnittsalter der Studenten mit Hilfe LINQ anzeigen[9.1]");
         Console.WriteLine("-----------------------------------------------------------------");
         var alterDurchschnitt = listeStudenten.Average(s => s.Alter);
@@ -572,6 +574,106 @@ public class Program
         Console.WriteLine("\n\n\n\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
+        */
+        //########################################################################################## Aufgabe 10 ##########################################################################################
+
+        //https://learntutorials.net/de/csharp/topic/40/ausnahmebehandlung
+
+        Console.WriteLine("\nAufgabe [10.3], Frage nach Zahl und Aufgabe [10.2], fange Division durch 0 ab");
+        Console.WriteLine("-----------------------------------------------------------------------------");
+
+        Console.WriteLine("\nIch möchte 3 Divisionen berechnen!");
+
+        Console.WriteLine("\nGib für Berechnung 1 die [erste] Zahl ein: ");
+        int a = int.Parse(Console.ReadLine());
+
+        int b = 0;
+        do
+        {
+            Console.WriteLine("\nGib für Berechnung 1 die [zweite] Zahl ein (Test Abfangen 0): ");
+            b = int.Parse(Console.ReadLine());
+            if (b == 0)
+            {
+                Console.WriteLine($"\nBitte keine 0 eingeben, versuch es nochmal!");
+            }
+        }   
+        while (b == 0);
+
+        Console.Clear();
+        Console.WriteLine("\nGib für Berechnung 2 die [erste] Zahl ein: ");
+        int c = int.Parse(Console.ReadLine());
+        Console.WriteLine("\nGib für Berechnung 2 die [zweite] Zahl ein: ");
+        int d = int.Parse(Console.ReadLine());
+        Console.Clear();
+        Console.WriteLine("\nGib für Berechnung 3 die [erste] Zahl ein: ");
+        int e = int.Parse(Console.ReadLine());
+        Console.WriteLine("\nGib für Berechnung 4 die [zweite] Zahl ein: ");
+        int f = int.Parse(Console.ReadLine());
+        Console.WriteLine("\n\n\n\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Console.WriteLine("\nAufgabe [10.1], erstelle Division und Aufgabe [10.4], fange Division durch 0 mit TryParse ab,\n" +
+            "Aufgabe [10.5], eigene Exception, Aufgabe[10.6], Fehlermeldung anzeigen");
+        Console.WriteLine("--------------------------------------------------------------------------------------------");
+
+
+        Console.WriteLine($"\nDivision {a} / {b}\t = {a / b:F2}");
+
+        try
+        {
+            try
+            {
+                double division2 = c / d;
+            }
+            catch (DivideByZeroException dzEx) when (d == 0)
+            {
+                Console.WriteLine($"\nAchtung: Division durch 0 ist nicht möglich! ({dzEx.Message}");
+            }
+            finally
+            {
+                if (d != 0)
+                {
+                    Console.WriteLine($"\nDivision {c} / {d}\t = {(double)c / d:F2}");
+                }
+                else
+                {
+                    Console.WriteLine($"Division {c} / {d}\t = [Fehler]");
+                }
+            }
+
+            try
+            {
+                double division3 = e / f;
+            }
+            catch (DivideByZeroException dzEx) when (f == 0)
+            {
+                Console.WriteLine($"\nAchtung: Division durch 0 ist nicht möglich! ({dzEx.Message}");
+            }
+            finally
+            {
+                if (f != 0)
+                {
+                    Console.WriteLine($"\nDivision {e} / {f}\t = {(double)e / f:F2}");
+                }
+                else
+                {
+                    Console.WriteLine($"Division {e} / {f}\t = [Fehler]");
+                }
+            }  
+        }            
+        catch (Exception Ex)
+        {
+            Console.WriteLine($"\nEs ist ein unerwarteter Fehler aufgetreten! ({Ex.Message})");
+        }
+
+        Console.WriteLine("\n\n\n\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+
 
     }
 }
