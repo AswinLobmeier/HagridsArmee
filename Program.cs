@@ -443,17 +443,17 @@ public class Program
 
 
         //########################################################################################## Aufgabe 8 ##########################################################################################
-
+        /*
         Console.WriteLine("\nAusgabe aller Studenten über 20 Jahre [8.1]");
         var studentUeber20 = listeStudenten.Where(s => s.Alter > 20);
         foreach (var student in studentUeber20)
         {
             student.AnzeigenStudent();
         }
-
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
+
 
         Console.WriteLine("\nAusgabe aller Studenten unter 18 Jahre [8.2]");
         var studentU18 = listeStudenten.Where(s => s.Alter < 18);
@@ -461,10 +461,10 @@ public class Program
         {
             student.AnzeigenStudent();
         }
-
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
+
 
         Console.WriteLine("\nZählen aller Studenten über 25 Jahre [8.3]");
         var studentUeber25 = listeStudenten.Where(s => s.Alter > 25);
@@ -472,6 +472,7 @@ public class Program
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
+
 
         Console.WriteLine("\nSortieren aller Studenten nach Alter [8.4]");
         var sortiereStudenten = listeStudenten.OrderBy(s => s.Alter);
@@ -483,14 +484,92 @@ public class Program
         Console.ReadKey();
         Console.Clear();
 
+
+        Console.WriteLine("\nNur den Namen Ausgeben [8.5]");
+        var nurNamen = listeStudenten.Select(s => s.Vorname);
+        foreach (var vorname in nurNamen)
+        {
+            Console.WriteLine($"\n{vorname}");
+        }
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
         Console.WriteLine("\nDen ältesten Studenten anzeigen [8.6]");
-        var aeltester = listeStudenten.Max(s => s.Alter);       // ers max und dann auf den verweisen
+        var aeltester = listeStudenten.Max(s => s.Alter);       // erst max und dann verweisen
         var aeltesterStudent = listeStudenten.Where(s => s.Alter == aeltester);
         foreach (var student in aeltesterStudent)
         {
             student.AnzeigenStudent();
         }
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+       */
+        //########################################################################################## Aufgabe 9 ##########################################################################################
+
+        // https://learntutorials.net/de/csharp/topic/68/linq-abfragen
+
+        Console.WriteLine("\nDas Durchschnittsalter der Studenten mit Hilfe LINQ anzeigen[9.1]");
+        Console.WriteLine("-----------------------------------------------------------------");
+        var alterDurchschnitt = listeStudenten.Average(s => s.Alter);
+        Console.WriteLine($"\nDas Durchschnittsalter der Studenten beträgt: {alterDurchschnitt}");
+        Console.WriteLine("\n\n\n\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Console.WriteLine("\nDen ältesten Studenten mit Hilfe LINQ anzeigen [9.2]");
+        Console.WriteLine("----------------------------------------------------");
+        var aeltester2 = listeStudenten.Max(s => s.Alter);
+        var aeltesterStudent2 = listeStudenten.Where(s => s.Alter == aeltester2);
+        foreach (var student in aeltesterStudent2)
+        {
+            student.AnzeigenStudent();
+        }
+        Console.WriteLine("\n\n\n\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("\nSortieren aller Studenten nach Alter mit Hilfe LINQ [9.3]");
+        Console.WriteLine("---------------------------------------------------------");
+        var sortiereStudenten2 = listeStudenten.OrderBy(s => s.Alter);
+        foreach (var student in sortiereStudenten2)
+        {
+            student.AnzeigenStudent();
+        }
+        Console.WriteLine("\n\n\n\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("\nFiltern aller Studenten über 20 Jahre mit Hilfe LINQ [9.4]");
+        Console.WriteLine("----------------------------------------------------------");
+        var studentUeber20 = listeStudenten.Where(s => s.Alter > 20);
+        foreach (var student in studentUeber20)
+        {
+            student.AnzeigenStudent();
+        }
+        Console.WriteLine("\n\n\n\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("\nZählen aller Studenten über Hilfe LINQ [9.5]");
+        Console.WriteLine("--------------------------------------------");
+        Console.WriteLine($"\nHallo, es befinden sich {listeStudenten.Count()} Studenten in der Liste");
+        Console.WriteLine("\n\n\n\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+
+        Console.WriteLine("\nNur den Vornamen der Studenten Ausgeben LINQ [9.6]");
+        Console.WriteLine("--------------------------------------------------");
+        var nurVornamen = listeStudenten.Select(s => s.Vorname);
+        foreach (var vorname in nurVornamen)
+        {
+            Console.WriteLine($"\n{vorname}");
+        }
+        Console.WriteLine("\n\n\n\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();
 

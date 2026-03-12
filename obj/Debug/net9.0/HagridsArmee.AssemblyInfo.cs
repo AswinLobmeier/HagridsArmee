@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HagridsArmee")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f4a7667c8c73d32c8ab4c275e161cacaac415ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+349d06a4b7f6662a94d6b9f375aac2403c5f21aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("HagridsArmee")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HagridsArmee")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

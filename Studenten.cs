@@ -23,7 +23,7 @@ public class Studenten
 
     public void AnzeigenStudent()
     {
-        Console.WriteLine($"Vorname: {Vorname}\nAlter:\t {Alter} Jahre");
+        Console.WriteLine($"\nVorname: {Vorname}\nAlter:\t {Alter} Jahre");
     }
 
 }
