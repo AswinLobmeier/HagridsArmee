@@ -674,7 +674,7 @@ public class Program
 
         */
 
-        //########################################################################################## Aufgabe 10 ##########################################################################################
+        //########################################################################################## Aufgabe 11 ##########################################################################################
 
 
         Kurs informatik = new Kurs("Informatik", 20);
@@ -693,6 +693,9 @@ public class Program
         informatik.StudentHinzufügen(s4);
         informatik.StudentHinzufügen(s5);
         informatik.StudentenAnzeigen();
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
 
         wiso.StudentHinzufügen(s1);
         wiso.StudentHinzufügen(s2);
@@ -700,6 +703,9 @@ public class Program
         wiso.StudentHinzufügen(s4);
         wiso.StudentHinzufügen(s5);
         wiso.StudentenAnzeigen();
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
 
         elektro.StudentHinzufügen(s1);
         elektro.StudentHinzufügen(s2);
@@ -707,7 +713,53 @@ public class Program
         elektro.StudentHinzufügen(s4);
         elektro.StudentHinzufügen(s5);
         elektro.StudentenAnzeigen();
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
 
+        //########################################################################################## Aufgabe 12 ##########################################################################################
+
+        List<Kurs> alleKurse = new List<Kurs> { informatik, wiso, elektro };
+
+        // Anzahl Kurse – flexibel!
+        int kurseGesamt = alleKurse.Count;
+        int studentenGesamt = alleKurse.Sum(k => k.AnzahlStudenten());
+        var alleStudenten = alleKurse.SelectMany(k => k.KursTeilnehmer);
+        double durchschnitt = alleStudenten.Average(s => s.Alter);
+
+        Console.WriteLine($"\nAktuell befinden sich {studentenGesamt} Studenten in {kurseGesamt} Kursen, dabei ist das Durchschnittsalter {durchschnitt:F2} Jahre");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+     
+        Studenten aeltesterStudent = alleStudenten.MaxBy(s => s.Alter);
+        Console.WriteLine($"\nÄltester Student ist {aeltesterStudent.Vorname} mit {aeltesterStudent.Alter} Jahren");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        Studenten juengster = alleStudenten.MinBy(s => s.Alter);
+        Console.WriteLine($"Jüngster Student ist {juengster.Vorname} mit {juengster.Alter} Jahren");
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        var sortiertNachAlter = alleStudenten.OrderBy(s => s.Alter).Distinct();
+        Console.WriteLine("\nSortierte Liste nach Alter");
+        foreach (var s in sortiertNachAlter)
+        {
+            Console.WriteLine($"  {s.Vorname,-12} | {s.Alter} Jahre");
+        }
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
+
+        var nurNamen = alleStudenten.Select(s => s.Vorname).Distinct();
+        Console.WriteLine("\nAlle Studenten");
+        foreach (var name in nurNamen)
+        {
+            Console.WriteLine($"  {name}");
+        }
         Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
         Console.ReadKey();
         Console.Clear();

@@ -22,7 +22,7 @@ public class Kurs
 
         KursTeilnehmer.Add(student);
     }
-
+    
     public void StudentenAnzeigen()
     {
         //Console.WriteLine($"DEBUG: MaxTeilnehmer = {MaxTeilnehmer}");
@@ -45,4 +45,8 @@ public class Kurs
         }
 	}
 
+    public int AnzahlStudenten()
+    {
+        return KursTeilnehmer.Count();
+    }
 }
