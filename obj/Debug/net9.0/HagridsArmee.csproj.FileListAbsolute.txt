@@ -7,9 +7,9 @@ C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.Gener
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.AssemblyInfoInputs.cache
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.AssemblyInfo.cs
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.csproj.CoreCompileInputs.cache
+C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.sourcelink.json
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.dll
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\refint\HagridsArmee.dll
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.pdb
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.genruntimeconfig.cache
 C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\ref\HagridsArmee.dll
-C:\Users\Public\C#\HagridsArmee\HagridsArmee\obj\Debug\net9.0\HagridsArmee.sourcelink.json

@@ -578,7 +578,7 @@ public class Program
         //########################################################################################## Aufgabe 10 ##########################################################################################
 
         //https://learntutorials.net/de/csharp/topic/40/ausnahmebehandlung
-
+        /*
         Console.WriteLine("\nAufgabe [10.3], Frage nach Zahl und Aufgabe [10.2], fange Division durch 0 ab");
         Console.WriteLine("-----------------------------------------------------------------------------");
 
@@ -672,7 +672,45 @@ public class Program
         Console.ReadKey();
         Console.Clear();
 
+        */
 
+        //########################################################################################## Aufgabe 10 ##########################################################################################
+
+
+        Kurs informatik = new Kurs("Informatik", 20);
+        Kurs wiso = new Kurs("Wirtschafts- und Sozialkunde", 5);
+        Kurs elektro = new Kurs("Elektrotechnik", 3);
+        
+        Studenten s1 = new Studenten("Aswin", 47);
+        Studenten s2 = new Studenten("Agnes", 38);
+        Studenten s3 = new Studenten("Marco", 44);
+        Studenten s4 = new Studenten("Tobi", 22);
+        Studenten s5 = new Studenten("Ramona", 28);
+
+        informatik.StudentHinzufügen(s1);
+        informatik.StudentHinzufügen(s2);
+        informatik.StudentHinzufügen(s3);
+        informatik.StudentHinzufügen(s4);
+        informatik.StudentHinzufügen(s5);
+        informatik.StudentenAnzeigen();
+
+        wiso.StudentHinzufügen(s1);
+        wiso.StudentHinzufügen(s2);
+        wiso.StudentHinzufügen(s3);
+        wiso.StudentHinzufügen(s4);
+        wiso.StudentHinzufügen(s5);
+        wiso.StudentenAnzeigen();
+
+        elektro.StudentHinzufügen(s1);
+        elektro.StudentHinzufügen(s2);
+        elektro.StudentHinzufügen(s3);
+        elektro.StudentHinzufügen(s4);
+        elektro.StudentHinzufügen(s5);
+        elektro.StudentenAnzeigen();
+
+        Console.WriteLine("\n..beliebige Taste zum fortfahren drücken..");
+        Console.ReadKey();
+        Console.Clear();
 
 
     }
